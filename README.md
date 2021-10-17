@@ -30,7 +30,3 @@ You are only allowed to use CSS (preprocessors are allowed) and vanilla JS for t
 - [Vercel](https://vercel.com/)
 
 **Have fun building!** 🚀
-
-fetch(
-`https://api.unsplash.com/photos/id?&client_id=${clientId}&query=photos`
-)

@@ -10,8 +10,7 @@ const modal = document.querySelector('.modal');
 const modalImg = document.querySelector('.modalImg');
 const modalClose = document.querySelector('.close');
 
-// const clientId = 'nNZ4wgIgZNFR4aqVQUbkOH7i58YTgiH9_f8Rcl1omEo';
-const clientId = 'a-s3jbXr7eL7o_OjnCiVnVMRcQB-8yEJnCuTI02uI6E';
+const clientId = 'nNZ4wgIgZNFR4aqVQUbkOH7i58YTgiH9_f8Rcl1omEo';
 let page = 0;
 loadNewPage();
 

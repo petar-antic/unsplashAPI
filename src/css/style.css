@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&display=swap");
+.overlay {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: black;
+}
+
+.overlay__inner {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.overlay__content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-width: 10px;
+  border-color: rgba(238, 243, 239, 0.05);
+  border-top-color: #eef3ef;
+  animation: spin 1s infinite linear;
+  border-radius: 100%;
+  border-style: solid;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Kaisei HarunoUmi", serif;
+}
+
+body .container {
+  background-color: black;
+}
+body .container .modal {
+  z-index: 1;
+  display: none;
+  padding-top: 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+body .container .modal .close {
+  text-decoration: none;
+  float: right;
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+body .container .modal .close:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 768px) {
+  body .container .modal .close {
+    font-size: 40px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body .container .modal .close {
+    font-size: 55px;
+  }
+}
+body .container .modal .modalImg {
+  height: 40%;
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media only screen and (min-width: 768px) {
+  body .container .modal .modalImg {
+    height: 75%;
+  }
+}
+body .container .block {
+  display: block;
+}
+body .container header {
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+}
+body .container header .logoBox {
+  display: flex;
+  flex-direction: column;
+}
+body .container header .logoBox .logo {
+  height: 70px;
+  width: 70px;
+}
+@media only screen and (min-width: 1024px) {
+  body .container header .logoBox .logo {
+    height: 100px;
+    width: 100px;
+  }
+}
+body .container header .logoBox span {
+  font-size: 10px;
+  color: #eef3ef;
+  text-transform: uppercase;
+}
+@media only screen and (min-width: 1024px) {
+  body .container header .logoBox span {
+    font-size: 13px;
+  }
+}
+body .container header .gridButtons {
+  display: flex;
+  flex-direction: column;
+}
+@media only screen and (max-width: 767px) {
+  body .container header .gridButtons {
+    display: none;
+  }
+}
+body .container header .gridButtons button img {
+  height: 35px;
+  width: 35px;
+  margin: 2px 2px 0px 2px;
+}
+@media only screen and (min-width: 1024px) {
+  body .container header .gridButtons button img {
+    height: 50px;
+    width: 50px;
+  }
+}
+body .container .photoBox {
+  position: relative;
+  display: grid;
+  padding: 0px 5px 5px 5px;
+}
+body .container .photoBox .imgDiv {
+  position: relative;
+}
+body .container .photoBox .imgDiv .imgInfo {
+  z-index: 100;
+  position: absolute;
+  border-bottom: 1px solid black;
+  padding: 2px;
+  width: 100%;
+  color: #eef3ef;
+  background-color: rgba(50, 50, 50, 0.5);
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 0.2fr 0.8fr 2fr;
+  grid-template-rows: 1fr;
+  column-gap: 5px;
+  grid-template-areas: "avatar info socialMedia" "portfolio portfolio portfolio";
+  font-size: 10px;
+}
+body .container .photoBox .imgDiv .imgInfo i {
+  color: black;
+}
+body .container .photoBox .imgDiv .imgInfo a {
+  text-decoration: none;
+  color: #eef3ef;
+  cursor: pointer;
+}
+body .container .photoBox .imgDiv .imgInfo .avatar {
+  grid-area: avatar;
+  justify-self: center;
+}
+body .container .photoBox .imgDiv .imgInfo .avatar img {
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+@media only screen and (min-width: 1024px) {
+  body .container .photoBox .imgDiv .imgInfo .avatar img {
+    width: 100px;
+    height: 100px;
+  }
+}
+body .container .photoBox .imgDiv .imgInfo .info {
+  grid-area: info;
+}
+@media only screen and (min-width: 1024px) {
+  body .container .photoBox .imgDiv .imgInfo .info {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body .container .photoBox .imgDiv .imgInfo .info {
+    font-size: 22px;
+  }
+}
+body .container .photoBox .imgDiv .imgInfo .socialMedia {
+  grid-area: socialMedia;
+  justify-self: flex-end;
+  text-align: right;
+}
+@media only screen and (min-width: 1024px) {
+  body .container .photoBox .imgDiv .imgInfo .socialMedia {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body .container .photoBox .imgDiv .imgInfo .socialMedia {
+    font-size: 22px;
+  }
+}
+body .container .photoBox .imgDiv .imgInfo .portfolio {
+  grid-area: portfolio;
+  justify-self: flex-end;
+  margin-top: -15px;
+}
+@media only screen and (min-width: 1024px) {
+  body .container .photoBox .imgDiv .imgInfo .portfolio {
+    font-size: 18px;
+    margin-top: -27px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  body .container .photoBox .imgDiv .imgInfo .portfolio {
+    font-size: 20px;
+  }
+}
+body .container .photoBox .imgDiv .gridLayout {
+  display: grid;
+}
+body .container .photoBox .imgDiv .image {
+  width: 100%;
+}
+@media only screen and (min-width: 1024px) {
+  body .container .photoBox .imgDiv .image:hover {
+    cursor: pointer;
+    opacity: 30%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .gridLayout .container .photoBox {
+    grid-auto-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .gridLayout .container .photoBox {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.gridLayout .container .photoBox .imgDiv {
+  display: flex;
+}
+.gridLayout .container .photoBox .imgDiv .imgInfo {
+  grid-template-columns: 0.2fr 1.2fr 1fr;
+  column-gap: 0px;
+}
+@media screen and (min-width: 1024px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo {
+    grid-template-columns: 0.2fr 1.4fr 1fr;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo {
+    font-size: 13px;
+  }
+}
+.gridLayout .container .photoBox .imgDiv .imgInfo .avatar {
+  display: flex;
+}
+@media only screen and (min-width: 1024px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo .avatar img {
+    width: 60px;
+    height: 60px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo .avatar img {
+    width: 70px;
+    height: 70px;
+  }
+}
+.gridLayout .container .photoBox .imgDiv .imgInfo .info {
+  margin-left: 3px;
+}
+@media only screen and (min-width: 1024px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo .info {
+    font-size: 10px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo .info {
+    font-size: 18px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo .socialMedia {
+    font-size: 11px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo .socialMedia {
+    font-size: 15px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo .portfolio {
+    font-size: 10px;
+    margin-top: -15px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .gridLayout .container .photoBox .imgDiv .imgInfo .portfolio {
+    font-size: 15px;
+  }
+}
+.gridLayout .container .photoBox .imgDiv .imgInfo i {
+  color: #eef3ef;
+}
+.gridLayout .container .photoBox .imgDiv img {
+  align-self: center;
+}
+@media only screen and (min-width: 1024px) {
+  .gridLayout .container .photoBox .imgDiv img:hover {
+    opacity: 40%;
+    cursor: pointer;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

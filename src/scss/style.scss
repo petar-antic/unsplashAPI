@@ -85,6 +85,9 @@ body {
           display: none;
         }
         button {
+          &:hover {
+            cursor: pointer;
+          }
           img {
             height: 35px;
             width: 35px;

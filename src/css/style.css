@@ -137,6 +137,9 @@ body .container header .gridButtons {
     display: none;
   }
 }
+body .container header .gridButtons button:hover {
+  cursor: pointer;
+}
 body .container header .gridButtons button img {
   height: 35px;
   width: 35px;

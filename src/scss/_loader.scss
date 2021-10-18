@@ -1,0 +1,43 @@
+@use './variables' as *;
+
+.overlay {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: rgb(0, 0, 0);
+}
+
+.overlay__inner {
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.overlay__content {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.spinner {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  border-width: 10px;
+  border-color: rgba(238, 243, 239, 0.05);
+  border-top-color: map-get($color, white);
+  animation: spin 1s infinite linear;
+  border-radius: 100%;
+  border-style: solid;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}

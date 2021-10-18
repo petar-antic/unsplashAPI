@@ -1,0 +1,23 @@
+{
+  "name": "unsplashapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "prettier": "^2.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/petar-antic/unsplashAPI.git"
+  },
+  "author": "petar_antic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/petar-antic/unsplashAPI/issues"
+  },
+  "homepage": "https://github.com/petar-antic/unsplashAPI#readme"
+}
